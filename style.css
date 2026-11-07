@@ -1,0 +1,180 @@
+ #aboutme{
+    grid-area: aboutme;
+ }
+ #hobbies{
+    grid-area: hobbies;
+ }
+ #papers{
+    grid-area: papers;
+ }
+ #blogs{
+    grid-area: blogs;
+ }
+ #photos{
+    grid-area: photos;
+ }
+ .aboutme{
+    text-align: center;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:10px;
+ }
+ .hobbies{
+    text-align: center;
+            width:50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top:10px; 
+ }
+ .papers{
+    
+    flex-wrap: wrap;
+    border: 1px solid #0A369D;
+    background-color: #4472CA;
+ }
+ .blogs{
+    text-align: center;
+            width:50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top:10px;
+ }
+ .photos{
+    text-align: center;
+            width:50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top:10px;
+
+ }
+ .photos img{
+    width: 60%;
+ }
+ .aboutme img{
+    display:block;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .papers h1{
+            width: 100%;
+            text-align: center;
+            color:aliceblue;
+}
+ 
+ nav{
+    display:flex;
+    
+    list-style: none;
+    justify-content: space-between;
+    border: 1px solid #0A369D;
+    background-color: #4472CA;
+    padding: 30px;
+    
+ }
+ nav a{
+    text-decoration: none;
+    color:aliceblue;
+ }
+ header{
+    grid-area: header;
+ }
+ footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    font-size: larger;
+    
+ }
+
+.hobbies li{
+    font-size: larger;
+    margin: 10px;
+}
+ .single_book{
+    border:1px solid #0A369D;
+    padding: 1rem;
+    background-color: #CFDEE7;
+    
+
+ }
+ .single_book h2{
+    text-align: center;
+ }
+ .single_book h3{
+    text-align: center;
+ }
+ .single_book img{
+    width: 100px;
+ }
+ .papers{
+    /* gap:1rem; */
+    padding:1rem;
+    }
+
+ .blogs p{
+    display:flex;
+            align-items: center;
+            gap:10px;
+ }
+ .blogs img{
+    width: 60%;
+ }
+ body{
+    background-color: #CFDEE7;
+ }
+
+ .container{
+    display:grid;
+            height:100vh;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0.5rem;
+
+            grid-template-areas:
+    
+            "header"
+            "main"
+            "footer"
+ }
+
+ 
+ 
+ 
+ main{
+    grid-area: main;
+    border:1px solid #0A369D;
+            display:grid;
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 0.5fr 1fr 0.5fr;
+            gap:1rem;
+
+            grid-template-areas: 
+            "aboutme hobbies"
+            "papers papers"
+            "blogs photos"
+            ;
+        }
+
+
+
+@media (max-width: 500px){
+            main{
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr 0.5fr;
+                /* gap:0.5rem; */
+
+                grid-template-areas: 
+                "aboutme"
+                "hobbies"
+                "papers"
+                "blogs"
+                "photos"
+                ;
+
+            }
+        }
